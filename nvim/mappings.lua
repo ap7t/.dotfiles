@@ -74,13 +74,12 @@ M.gitsigns = {
 
 
 
--- M.telescope = {
---   n = {
---     ["<leader>fg"] = {":lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>", "Telescope live grep args"},
---     -- ["<leader>fg"] = {":lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>", "Telescope live grep args under cursor"}
---     -- ""<leader>gc", live_grep_args_shortcuts.grep_word_under_cursor
---   }
--- }
+M.telescope = {
+  n = {
+    ["<leader>fg"] = {":lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>", "Telescope live grep args"},
+    ["<leader>fc"] = {":lua require('telescope-live-grep-args.shortcuts').grep_word_under_cursor()<CR>", "Telescope live grep args under cursor"}
+  }
+}
 --
 -- -- Your custom mappings
 M.abc = {

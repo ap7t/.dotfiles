@@ -108,6 +108,15 @@ local plugins = {
     -- refer to the configuration section below
    },
   },
+-- { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
+ {
+    "nvim-telescope/telescope.nvim",
+    dependencies = { "nvim-telescope/telescope-live-grep-args.nvim" },
+      defaults = {
+        file_ignore_patterns = {"node_modules", "vendor", "*.sql.go"}
+      },
+      extensions_list = { "themes", "terms", "live_grep_args"},
+  },
   -- {'akinsho/git-conflict.nvim', version = "*", config = true}
 }
 return plugins
