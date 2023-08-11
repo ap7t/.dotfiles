@@ -104,11 +104,11 @@ local plugins = {
    dependencies = { "nvim-tree/nvim-web-devicons" },
    opts = {
     -- your configuration comes here
-    -- or leave it empty to use the default settings
+   -- or leave it empty to use the default settings
     -- refer to the configuration section below
    },
+   lazy=false,
   },
--- { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
  {
     "nvim-telescope/telescope.nvim",
     dependencies = { "nvim-telescope/telescope-live-grep-args.nvim" },
@@ -116,6 +116,12 @@ local plugins = {
         file_ignore_patterns = {"node_modules", "vendor", "*.sql.go"}
       },
       extensions_list = { "themes", "terms", "live_grep_args"},
+  },
+  {
+    'iamcco/markdown-preview.nvim',
+     config = function()
+      vim.fn["mkdp#util#install"]()
+    end,
   },
   -- {'akinsho/git-conflict.nvim', version = "*", config = true}
 }

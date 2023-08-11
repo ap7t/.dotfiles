@@ -10,7 +10,7 @@ M.ui = {
     -- modules arg here is the default table of modules
     overriden_modules = function(modules)
       modules[2] = (function()
-      local st_modules = require "nvchad_ui.statusline.default"
+      local st_modules = require "nvchad.statusline.default"
           local sep_r = "█"
           return "%#St_file_info#" .. vim.fn.expand "%:h" .. "%#St_file_sep#" .. sep_r .. st_modules.fileInfo()
       end)()
