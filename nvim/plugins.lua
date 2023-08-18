@@ -118,11 +118,15 @@ local plugins = {
       extensions_list = { "themes", "terms", "live_grep_args"},
   },
   {
-    'iamcco/markdown-preview.nvim',
+    "kylechui/nvim-surround",
+     version = "*", -- Use for stability; omit to use `main` branch for the latest features
+     event = "VeryLazy",
      config = function()
-      vim.fn["mkdp#util#install"]()
-    end,
-  },
+         require("nvim-surround").setup({
+             -- Configuration here, or leave empty to use defaults
+         })
+     end
+   }
   -- {'akinsho/git-conflict.nvim', version = "*", config = true}
 }
 return plugins
