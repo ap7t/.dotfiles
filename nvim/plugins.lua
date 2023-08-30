@@ -126,7 +126,11 @@ local plugins = {
              -- Configuration here, or leave empty to use defaults
          })
      end
-   }
+   },
   -- {'akinsho/git-conflict.nvim', version = "*", config = true}
+  {
+    'jbyuki/instant.nvim',
+    lazy=false
+  },
 }
 return plugins
