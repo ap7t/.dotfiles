@@ -22,19 +22,19 @@ M.dap = {
       "<cmd> DapTerminate <CR>",
       "Quit debugging"
     },
-    ["<leader>dso"] = {
+    ["<leader>do"] = {
       "<cmd> DapStepOver <CR>",
       "Step over while debugging"
     },
-    ["<leader>dsi"] = {
+    ["<leader>di"] = {
       "<cmd> DapStepInto <CR>",
       "Step into while debugging"
     },
-    ["<leader>dtr"] = {
+    ["<leader>dr"] = {
       "<cmd> DapToggleRepl <CR>",
       "Toggle repl  while debugging"
     },
-    ["<leader>dus"] = {
+    ["<leader>ds"] = {
       function ()
         local widgets = require("dap.ui.widgets");
         local sidebar = widgets.sidebar(widgets.scopes);
@@ -77,7 +77,15 @@ M.gitsigns = {
 M.telescope = {
   n = {
     ["<leader>fg"] = {":lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>", "Telescope live grep args"},
-    ["<leader>fc"] = {":lua require('telescope-live-grep-args.shortcuts').grep_word_under_cursor()<CR>", "Telescope live grep args under cursor"}
+    ["<leader>fc"] = {":lua require('telescope-live-grep-args.shortcuts').grep_word_under_cursor()<CR>", "Telescope live grep args under cursor"},
+    ["<leader>fi"] = {"<cmd> Telescope lsp_implementations<CR>", "Telescope live grep args under cursor"}
+  },
+  v = {
+    ["<leader>fv"] = {":lua require('telescope-live-grep-args.shortcuts').grep_visual_selection()<CR>", "Telescope live grep args visual selection"}
+  },
+  i = {
+    -- ["<C-j>"] = {":lua require('telescope.actions').cycle_history_next()<CR>", "telescope hitory next"},
+    -- ["<C-k>"] = {":lua require('telescope.actions').cycle_history_prev()<CR>", "telescope hitory previous"},
   }
 }
 --
