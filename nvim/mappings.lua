@@ -115,7 +115,7 @@ M.abc = {
     ["<leader>q"] = {"<cmd> q <CR>", "quit"},
     ["<leader>Q"] = {"<cmd> q! <CR>", "force quit"},
     ["<leader>tt"] = {"<cmd> TroubleToggle <CR>", "toggle trouble"},
-    ["<C-i"] = {"<C-i>", "jump next"},
+    ["<C-i>"] = {"<C-i>", "jump next"},
 
 
   },
