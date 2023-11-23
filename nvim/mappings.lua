@@ -102,7 +102,7 @@ M.abc = {
 
   n = {
      ["<leader>s"] = { "<cmd> w <CR>", "Save file" },
-     ["h"] = {"<cmd>lua require'hop'.hint_char1()<cr>", "hop to word"},
+     ["<leader>h"] = {"<cmd>lua require'hop'.hint_char1()<cr>", "hop to word"},
      ["="] = {"<cmd>horizontal resize +2<cr>", "horizontal size increase"},
      ["-"] = {"<cmd>horizontal resize -2<cr>", "horizontal size decrease"},
      ["+"] = {"<cmd>vertical resize +5<cr>", "vertical size increase"},
@@ -114,7 +114,10 @@ M.abc = {
     ['<leader>"'] = {"<cmd> sp <CR>", "horizontal split"},
     ["<leader>q"] = {"<cmd> q <CR>", "quit"},
     ["<leader>Q"] = {"<cmd> q! <CR>", "force quit"},
-    ["<leader>tt"] = {"<cmd> TroubleToggle <CR>", "toggle trouble"}
+    ["<leader>tt"] = {"<cmd> TroubleToggle <CR>", "toggle trouble"},
+    ["<C-i"] = {"<C-i>", "jump next"},
+
+
   },
 
   c = {
