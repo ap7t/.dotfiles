@@ -115,7 +115,8 @@ M.abc = {
     ["<leader>q"] = {"<cmd> q <CR>", "quit"},
     ["<leader>Q"] = {"<cmd> q! <CR>", "force quit"},
     ["<leader>tt"] = {"<cmd> TroubleToggle <CR>", "toggle trouble"},
-    ["<C-i>"] = {"<C-i>", "jump next"},
+    ["<tab>"] = {"<C-i>", "jump next"},
+
 
 
   },
@@ -123,6 +124,12 @@ M.abc = {
   c = {
      ["jk"] = { "<ESC>", "escape command mode" , opts = { nowait = true }},
   },
+}
+
+M.disabled = {
+  n = {
+      ["<C-i>"] = "",
+  }
 }
 
 -- M.general = {
