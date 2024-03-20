@@ -32,7 +32,10 @@ M.ui = {
          base_16 = {
             base02 = "#3c3c3c",
          },
-    }
+         base_30 = {
+            grey_fg = "#969a9b",
+      },
+    },
   },
   nvdash = {
     load_on_startup = true
