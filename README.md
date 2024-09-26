@@ -1,11 +1,12 @@
 ### Using neovim on a new machine
 ```
-stow --adopt -t /Users/adam/.config/nvim/lua/custom nvim
+make new
 ```
+*May need to update makefile with new username*
 
 ### Syncing nvchad updates
 ```
-cd ~/.dotfiles && cp -r ~/.config/nvim/lua/custom/* nvim
+make sync
 ```
 
 
