@@ -45,6 +45,18 @@ M.dap = {
   }
 }
 
+M.dap_python = {
+  plugin = true,
+  n = {
+    ["<leader>dpr"] = {
+      function()
+        require('dap-python').test_method()
+      end,
+      "debug python test",
+    }
+  }
+}
+
 M.dap_go = {
   plugin = true,
   n = {
@@ -114,7 +126,7 @@ M.abc = {
     ['<leader>"'] = {"<cmd> sp <CR>", "horizontal split"},
     ["<leader>q"] = {"<cmd> q <CR>", "quit"},
     ["<leader>Q"] = {"<cmd> q! <CR>", "force quit"},
-    ["<leader>tt"] = {"<cmd> TroubleToggle <CR>", "toggle trouble"},
+    ["<leader>tt"] = {"<cmd> Trouble diagnostics toggle focus=false filter.buf=0<CR>", "toggle trouble"},
     ["<tab>"] = {"<C-i>", "jump next"},
 
 

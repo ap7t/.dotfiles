@@ -4,7 +4,7 @@ local capabilities = require("plugins.configs.lspconfig").capabilities
 local lspconfig = require("lspconfig")
 local util = require "lspconfig/util"
 
-lspconfig.gopls.setup {
+lspconfig.gopls.setup({
   on_attach = on_attach,
   capabilities = capabilities,
   cmd = {"gopls"},
@@ -18,5 +18,18 @@ lspconfig.gopls.setup {
       },
     },
   },
-}
+})
 
+lspconfig.pyright.setup({
+  on_attach = on_attach,
+  capabilities = capabilities,
+  filetypes = {"python"},
+})
+
+lspconfig.ruff_lsp.setup({
+    init_options = {
+        settings = {
+            args = {},  -- Additional Ruff LSP arguments if needed
+        },
+    },
+})
