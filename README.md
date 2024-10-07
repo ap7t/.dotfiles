@@ -1,12 +1,5 @@
-### Using neovim on a new machine
+### Set up neovim on a new mac machine
 ```
-make new
+make mac
 ```
-*May need to update makefile with new username*
-
-### Syncing nvchad updates
-```
-make sync
-```
-
 
