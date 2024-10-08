@@ -138,6 +138,12 @@ M.abc = {
   },
 }
 
+M.lsp = {
+  n = {
+    ["<leader>lr"] = {"<cmd>LspRestart <CR>", "restart lsp"}
+  }
+}
+
 M.disabled = {
   n = {
       ["<C-i>"] = "",
