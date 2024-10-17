@@ -114,7 +114,11 @@ local plugins = {
     "ruifm/gitlinker.nvim",
     dependencies = {'nvim-lua/plenary.nvim'},
     init = function()
-      require("gitlinker").setup()
+      require("gitlinker").setup({
+        callbacks = {
+          ["gitlab.cargo.one"] = require"gitlinker.hosts".get_gitlab_type_url
+        }
+      })
     end,
   },
   {
