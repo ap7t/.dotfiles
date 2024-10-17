@@ -25,11 +25,3 @@ lspconfig.pyright.setup({
   capabilities = capabilities,
   filetypes = {"python"},
 })
-
-lspconfig.ruff_lsp.setup({
-    init_options = {
-        settings = {
-            args = {},  -- Additional Ruff LSP arguments if needed
-        },
-    },
-})
