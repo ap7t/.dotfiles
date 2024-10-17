@@ -16,7 +16,12 @@ local opts = {
       end,
 
     }),
-    null_ls.builtins.formatting.black,
+    null_ls.builtins.formatting.black.with({
+      extra_args = {
+        "--skip-string-normalization",
+        "--line-length", "120",
+      }
+    }),
   },
   on_attach = function(client, bufnr)
     if client.supports_method("textDocument/formatting") then 
