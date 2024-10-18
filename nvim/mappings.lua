@@ -144,6 +144,13 @@ M.lsp = {
   }
 }
 
+M.noice = {
+  n = {
+    ["<leader>nd"] = {"<cmd>NoiceDismiss <CR>", "dismiss noice messages"},
+    ["<leader>nt"] = {"<cmd>Noice telescope <CR>", "noice telescope"}
+  }
+}
+
 M.disabled = {
   n = {
       ["<C-i>"] = "",
