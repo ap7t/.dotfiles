@@ -11,6 +11,7 @@ local plugins = {
 				"debugpy",
 				"black",
 				"stylua",
+				"prettier",
 			},
 		},
 	},
@@ -23,7 +24,7 @@ local plugins = {
 	},
 	{
 		"nvimtools/none-ls.nvim",
-		ft = { "go", "python", "lua" },
+		ft = { "go", "python", "lua", "json", "yaml" },
 		opts = function()
 			return require("custom.configs.null-ls")
 		end,
