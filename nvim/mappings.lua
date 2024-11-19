@@ -136,6 +136,8 @@ M.abc = {
 		["<leader>Q"] = { "<cmd> q! <CR>", "force quit" },
 		["<leader>tt"] = { "<cmd> Trouble diagnostics toggle focus=false filter.buf=0<CR>", "toggle trouble" },
 		["<tab>"] = { "<C-i>", "jump next" },
+		["<leader>zz"] = { "<C-w>_<C-w>|", "fullscreen pane" },
+		["<leader>zx"] = { "<C-w>=", "reset pane" },
 	},
 
 	c = {
