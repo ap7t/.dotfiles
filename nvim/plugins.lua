@@ -24,7 +24,7 @@ local plugins = {
 	},
 	{
 		"nvimtools/none-ls.nvim",
-		ft = { "go", "python", "lua", "json", "yaml" },
+		ft = { "go", "python", "lua" },
 		opts = function()
 			return require("custom.configs.null-ls")
 		end,
