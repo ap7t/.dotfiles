@@ -20,8 +20,18 @@ lspconfig.gopls.setup({
 	},
 })
 
-lspconfig.pyright.setup({
+lspconfig.pylsp.setup({
 	on_attach = on_attach,
 	capabilities = capabilities,
 	filetypes = { "python" },
+	settings = {
+		pylsp = {
+			plugins = {
+				pycodestyle = {
+					enabled = true, -- Enable pycodestyle plugin (still enabled)
+					maxLineLength = 120, -- Set custom max line length (default is 79)
+				},
+			},
+		},
+	},
 })
