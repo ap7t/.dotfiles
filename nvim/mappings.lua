@@ -95,7 +95,8 @@ M.telescope = {
 			":lua require('telescope-live-grep-args.shortcuts').grep_word_under_cursor()<CR>",
 			"Telescope live grep args under cursor",
 		},
-		["<leader>fi"] = { "<cmd> Telescope lsp_implementations<CR>", "Telescope live grep args under cursor" },
+		["<leader>fi"] = { "<cmd> Telescope lsp_implementations<CR>", "Telescope lsp implementations" },
+		["<leader>fr"] = { "<cmd> Telescope lsp_references<CR>", "Telescope lsp references" },
 	},
 	v = {
 		["<leader>fv"] = {
