@@ -11,7 +11,6 @@ local plugins = {
 				"debugpy",
 				"black",
 				"stylua",
-				-- "prettier",
 			},
 		},
 	},
