@@ -252,6 +252,8 @@ local plugins = {
 							local python_path = venv and (venv .. "/bin/python") or "python"
 							return python_path
 						end,
+
+						args = { "--ignore=src", "--log-level", "DEBUG" },
 					}),
 				},
 			})
