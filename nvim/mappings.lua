@@ -154,14 +154,31 @@ M.lsp = {
 
 M.noice = {
 	n = {
-		["<leader>nd"] = { "<cmd>NoiceDismiss <CR>", "dismiss noice messages" },
-		["<leader>nt"] = { "<cmd>Noice telescope <CR>", "noice telescope" },
+		["<leader>mc"] = { "<cmd>NoiceDismiss <CR>", "dismiss noice messages" },
+		["<leader>mt"] = { "<cmd>Noice telescope <CR>", "noice telescope" },
 	},
 }
 
 M.disabled = {
 	n = {
 		["<C-i>"] = "",
+	},
+}
+
+M.neotest = {
+	n = {
+		["<leader>nr"] = { "<cmd>lua require('neotest').run.run()<cr>", "Run nearest test" },
+		["<leader>nf"] = { "<cmd>lua require('neotest').run.run(vim.fn.expand('%'))<cr>", "Run current file" },
+		["<leader>na"] = { "<cmd>lua require('neotest').run.run({ suite = true })<cr>", "Run all tests" },
+		["<leader>nd"] = { "<cmd>lua require('neotest').run.run({ strategy = 'dap' })<cr>", "Debug nearest test" },
+		["<leader>ns"] = { "<cmd>lua require('neotest').run.stop()<cr>", "Stop test" },
+		["<leader>nn"] = { "<cmd>lua require('neotest').run.attach()<cr>", "Attach to nearest test" },
+		["<leader>no"] = { "<cmd>lua require('neotest').output_panel.toggle()<cr>", "Toggle output panel" },
+		["<leader>nv"] = { "<cmd>lua require('neotest').summary.toggle()<cr>", "Toggle summary" },
+		["<leader>nc"] = {
+			"<cmd>lua require('neotest').run.run({ suite = true, env = { CI = true } })<cr>",
+			"Run all tests with CI",
+		},
 	},
 }
 

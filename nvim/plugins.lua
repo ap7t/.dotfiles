@@ -67,6 +67,12 @@ local plugins = {
 			dap.listeners.before.event_exited.dapui_config = function()
 				dapui.close()
 			end
+			vim.fn.sign_define("DapBreakpoint", {
+				text = "🌮",
+				texthl = "DiagnosticSignError",
+				linehl = "",
+				numhl = "",
+			})
 		end,
 	},
 	{
@@ -187,7 +193,13 @@ local plugins = {
 		lazy = false,
 		branch = "regexp", -- This is the regexp branch, use this for the new version
 		config = function()
-			require("venv-selector").setup()
+			require("venv-selector").setup({
+				search_venv_managers = false, -- disables poetry/conda if not needed
+				search = true,
+				name = { ".venv", "venv" }, -- folders to auto-detect
+				auto_refresh = true,
+				auto_activate = true,
+			})
 		end,
 		keys = {
 			{ ",v", "<cmd>VenvSelect<cr>" },
@@ -217,6 +229,33 @@ local plugins = {
 	{
 		"OXY2DEV/markview.nvim",
 		lazy = false,
+	},
+	{
+		"nvim-neotest/neotest",
+		event = { "BufReadPost", "BufNewFile" },
+		dependencies = {
+			"nvim-neotest/nvim-nio",
+			"nvim-lua/plenary.nvim",
+			"antoinemadec/FixCursorHold.nvim",
+			"nvim-treesitter/nvim-treesitter",
+			"nvim-neotest/neotest-python",
+		},
+		config = function()
+			require("neotest").setup({
+				adapters = {
+					require("neotest-python")({
+						-- Optional: customize if needed
+						dap = { justMyCode = false },
+						-- Automatically pick the current Python from the activated venv
+						python = function()
+							local venv = os.getenv("VIRTUAL_ENV")
+							local python_path = venv and (venv .. "/bin/python") or "python"
+							return python_path
+						end,
+					}),
+				},
+			})
+		end,
 	},
 }
 
