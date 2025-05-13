@@ -73,6 +73,12 @@ local plugins = {
 				linehl = "",
 				numhl = "",
 			})
+			vim.fn.sign_define("DapStopped", {
+				text = "➡️",
+				texthl = "DiagnosticSignError",
+				linehl = "",
+				numhl = "",
+			})
 		end,
 	},
 	{
