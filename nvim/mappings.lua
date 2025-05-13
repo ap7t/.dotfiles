@@ -43,6 +43,12 @@ M.dap = {
 			end,
 			"Open debugging sidebar",
 		},
+		["<leader>df"] = {
+			function()
+				require("dap").clear_breakpoints()
+			end,
+			"Clear all breakpoints",
+		},
 	},
 }
 
