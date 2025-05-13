@@ -170,6 +170,7 @@ M.neotest = {
 		["<leader>nr"] = { "<cmd>lua require('neotest').run.run()<cr>", "Run nearest test" },
 		["<leader>nf"] = { "<cmd>lua require('neotest').run.run(vim.fn.expand('%'))<cr>", "Run current file" },
 		["<leader>na"] = { "<cmd>lua require('neotest').run.run({ suite = true })<cr>", "Run all tests" },
+		["<leader>nl"] = { "<cmd>lua require('neotest').run.run_last()<cr>", "Run last test" },
 		["<leader>nd"] = { "<cmd>lua require('neotest').run.run({ strategy = 'dap' })<cr>", "Debug nearest test" },
 		["<leader>ns"] = { "<cmd>lua require('neotest').run.stop()<cr>", "Stop test" },
 		["<leader>nn"] = { "<cmd>lua require('neotest').run.attach()<cr>", "Attach to nearest test" },
