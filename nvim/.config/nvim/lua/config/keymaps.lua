@@ -15,7 +15,11 @@ vim.keymap.set("n", "<leader>gy", "<leader>gY", { desc = "Copy remote git url", 
 
 vim.keymap.del("n", "<leader>l")
 vim.keymap.set("n", "<leader>lv", "<cmd>Lazy<cr>", { desc = "Lazy" })
+
 vim.keymap.set("n", "<leader>lg", "<leader>gg", { desc = "LazyGit", remap = true })
 
 vim.keymap.set("n", "<leader>/", "gcc", { desc = "Comment line", remap = true })
 vim.keymap.set("v", "<leader>/", "gc", { desc = "Comment selected lines", remap = true })
+
+vim.keymap.set("n", "<leader>gj", "<cmd> Gitsigns next_hunk <CR>", { desc = "Next git hunk", remap = true })
+vim.keymap.set("n", "<leader>gk", "<cmd> Gitsigns prev_hunk <CR>", { desc = "Previous git hunk", remap = true })
