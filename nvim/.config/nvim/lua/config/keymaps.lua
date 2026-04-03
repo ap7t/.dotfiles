@@ -11,5 +11,9 @@ vim.keymap.set("n", "<leader>v", "<cmd> vsp <CR>", { desc = "Vetical split" })
 vim.keymap.set("n", '<leader>"', "<cmd> sp <CR>", { desc = "Horizontal split" })
 vim.keymap.set("n", "<leader>q", "<cmd> q <CR>", { desc = "Close" })
 
+vim.keymap.set("n", "<leader>gy", "<leader>gY", { desc = "Copy remote git url", remap = true })
+vim.keymap.set("n", "<leader>lg", "<leader>gg", { desc = "LazyGit", remap = true })
+vim.keymap.set("n", "<leader>lv", "<leader>l", { desc = "LazyVim", remap = true })
+
 vim.keymap.set("n", "<leader>/", "gcc", { desc = "Comment line", remap = true })
 vim.keymap.set("v", "<leader>/", "gc", { desc = "Comment selected lines", remap = true })
