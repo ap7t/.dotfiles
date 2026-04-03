@@ -4,6 +4,12 @@
 
 vim.keymap.set("i", "jk", "<Esc>", { desc = "Escape insert mode" })
 vim.keymap.set("v", "jk", "<Esc>", { desc = "Escape visual mode" })
+
 vim.keymap.set("n", "s", "<cmd> w <CR>", { desc = "Save file" })
+
 vim.keymap.set("n", "<leader>v", "<cmd> vsp <CR>", { desc = "Vetical split" })
 vim.keymap.set("n", '<leader>"', "<cmd> sp <CR>", { desc = "Horizontal split" })
+vim.keymap.set("n", "<leader>q", "<cmd> q <CR>", { desc = "Close" })
+
+vim.keymap.set("n", "<leader>/", "gcc", { desc = "Comment line", remap = true })
+vim.keymap.set("v", "<leader>/", "gc", { desc = "Comment selected lines", remap = true })
